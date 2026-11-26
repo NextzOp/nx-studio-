@@ -1,0 +1,339 @@
+
+/* =====================================
+   NX STUDIO - PORTFÓLIO
+===================================== */
+
+.portfolio-hero {
+    min-height: 65vh;
+    padding: 120px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 80% 45%, #252525 0%, #090909 60%);
+    border-bottom: 1px solid #222;
+}
+
+.portfolio-hero h1 {
+    max-width: 1050px;
+    font-size: clamp(42px, 6.5vw, 82px);
+    line-height: 1.08;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.portfolio-hero h1 span {
+    display: block;
+    color: var(--silver);
+}
+
+.portfolio-hero > p:not(.section-label) {
+    max-width: 620px;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.portfolio-counter {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 55px;
+}
+
+/* PROJETOS */
+
+.portfolio-projects {
+    padding: 110px 8%;
+}
+
+.portfolio-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.portfolio-section-heading h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.portfolio-section-heading > span {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.portfolio-case {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    min-height: 430px;
+    background: #111;
+    border: 1px solid #292929;
+    margin-bottom: 35px;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.portfolio-case:hover {
+    border-color: #777;
+    transform: translateY(-4px);
+}
+
+/* IMAGENS DOS PROJETOS */
+
+.case-image {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    background-position: center;
+    background-size: cover;
+}
+
+.case-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.05)
+    );
+}
+
+.burger-image {
+    background-image:
+        url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400");
+}
+
+.vertice-image {
+    background-image:
+        linear-gradient(135deg, #252525, #080808);
+}
+
+.vertice-image::after {
+    content: "V";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    font-family: Georgia, serif;
+    font-size: clamp(160px, 25vw, 300px);
+    font-weight: bold;
+    color: rgba(192,192,192,.13);
+}
+
+.case-image-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.case-image-overlay span {
+    color: var(--silver);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.case-image-overlay h3 {
+    font-size: clamp(35px, 5vw, 55px);
+    letter-spacing: -2px;
+    margin-top: 12px;
+}
+
+.case-image-overlay p {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* INFORMAÇÕES */
+
+.case-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.case-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.case-meta span {
+    color: var(--silver);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.case-content > h3 {
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.case-content > p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 35px;
+}
+
+.case-tags span {
+    border: 1px solid #3a3a3a;
+    color: #bbb;
+    padding: 7px 11px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.case-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.case-link {
+    color: var(--silver);
+    font-size: 13px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.case-link:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.case-secondary {
+    color: #888;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.case-secondary:hover {
+    color: white;
+}
+
+/* CHAMADA FINAL */
+
+.portfolio-cta {
+    padding: 120px 8%;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #222 0%, #0b0b0b 70%);
+    border-top: 1px solid #222;
+}
+
+.portfolio-cta h2 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    letter-spacing: -3px;
+    margin-bottom: 35px;
+}
+
+.portfolio-cta h2 span {
+    color: var(--silver);
+}
+
+.portfolio-cta .main-button {
+    margin-top: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .portfolio-case {
+        grid-template-columns: 1fr;
+    }
+
+    .case-image {
+        min-height: 340px;
+    }
+
+    .case-content {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-hero {
+        min-height: 60vh;
+        padding: 90px 6%;
+    }
+
+    .portfolio-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .portfolio-projects {
+        padding: 80px 6%;
+    }
+
+    .portfolio-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .case-image {
+        min-height: 290px;
+        padding: 25px;
+    }
+
+    .case-content {
+        padding: 28px;
+    }
+
+    .portfolio-cta {
+        padding: 90px 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .case-meta {
+        flex-direction: column;
+    }
+}
+
+/* VÉRTICE - IMAGEM DO PROJETO */
+
+.vertice-image {
+    position: relative;
+    overflow: hidden;
+    background: #090909;
+    padding: 0;
+}
+
+.vertice-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.case-card:hover .vertice-image img,
+.portfolio-case:hover .vertice-image img {
+    transform: scale(1.04);
+}
